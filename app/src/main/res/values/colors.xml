@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main colors -->
+    <item name="font_day" type="color">#E91E63</item>
+    <item name="font_night" type="color">#FFEB3B</item>
+    <item name="tabs" type="color">#FFB800</item>
+
+    <!-- status bar -->
+    <item name="status_bar_day" type="color">#E5A500</item>
+    <item name="status_bar_night" type="color">#543298</item>
+
+    <!-- List_item -->
+    <item name="item_day" type="color">#E91E63</item>
+    <item name="item_date" type="color">#00BCD4</item>
+    <item name="item_temp_min" type="color">#00BCD4</item>
+    <item name="item_divider" type="color">#C6C6C6</item>
+    <item name="item_temp_max" type="color">#FFB800</item>
+</resources>
