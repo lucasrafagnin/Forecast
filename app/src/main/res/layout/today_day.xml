@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_day"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_placeholder_day_clear_sky"/>
+
+    <TextView
+        android:id="@+id/temp"
+        style="@style/AppTextViewDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/main_divider"
+        android:text="27º"
+        android:textSize="73sp"/>
+
+    <TextView
+        android:id="@+id/temp_min"
+        style="@style/AppTextViewDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/main_divider"
+        android:layout_toLeftOf="@+id/temp_divider"
+        android:text="14º"/>
+
+    <View
+        android:id="@+id/temp_divider"
+        android:layout_width="1dp"
+        android:layout_height="28dp"
+        android:layout_above="@id/main_divider"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/temp_max"
+        android:background="@color/font_day"/>
+
+    <TextView
+        android:id="@+id/temp_max"
+        style="@style/AppTextViewDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/main_divider"
+        android:layout_alignParentRight="true"
+        android:text="32º"/>
+
+    <View
+        android:id="@+id/main_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/city"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/font_day"/>
+
+    <TextView
+        android:id="@+id/city"
+        style="@style/AppTextViewDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="GOTHAM"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/time"
+        style="@style/AppTextViewDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="13h24"/>
+</RelativeLayout>

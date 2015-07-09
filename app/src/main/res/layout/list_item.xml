@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/row"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:background="@drawable/cell_yellow">
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_toLeftOf="@+id/temp_icon"
+        android:gravity="center"
+        android:text="DOM"
+        android:textAllCaps="true"
+        android:textColor="@color/item_day"
+        android:textSize="26sp"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/day"
+        android:layout_below="@+id/day"
+        android:layout_marginBottom="14dp"
+        android:gravity="center"
+        android:text="20/03"
+        android:textColor="@color/item_date"
+        android:textSize="12sp"/>
+
+    <View
+        android:id="@+id/space"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/temp_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/space"
+        android:src="@drawable/ic_placeholder_list_clear_sky"/>
+
+    <TextView
+        android:id="@+id/temp_min"
+        style="@style/ListTextViewTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/temp_divider"
+        android:text="17º"
+        android:textColor="@color/item_temp_min"/>
+
+    <View
+        android:id="@+id/temp_divider"
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/temp_max"
+        android:background="@color/item_divider"/>
+
+    <TextView
+        android:id="@+id/temp_max"
+        style="@style/ListTextViewTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="24dp"
+        android:text="38º"
+        android:textColor="@color/item_temp_max"/>
+</RelativeLayout>
