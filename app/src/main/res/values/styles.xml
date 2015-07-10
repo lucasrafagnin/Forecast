@@ -8,18 +8,15 @@
     <style name="AppTextViewDay" parent="@style/Base.TextAppearance.AppCompat">
         <item name="android:textSize">26sp</item>
         <item name="android:textColor">@color/font_day</item>
-        <item name="fontPath">fonts/miso_light.otf</item>
     </style>
 
     <style name="AppTextViewNight" parent="@style/Base.TextAppearance.AppCompat">
         <item name="android:textSize">26sp</item>
         <item name="android:textColor">@color/font_night</item>
-        <item name="fontPath">fonts/miso_light.otf</item>
     </style>
 
     <style name="ListTextViewTemp" parent="@style/Base.TextAppearance.AppCompat">
         <item name="android:textSize">24sp</item>
-        <item name="fontPath">fonts/miso_light.otf</item>
     </style>
 
 </resources>

@@ -3,7 +3,8 @@
     <!-- Main colors -->
     <item name="font_day" type="color">#E91E63</item>
     <item name="font_night" type="color">#FFEB3B</item>
-    <item name="tabs" type="color">#FFB800</item>
+    <item name="tabs_day" type="color">#FFB800</item>
+    <item name="tabs_night" type="color">#6A3FBE</item>
 
     <!-- status bar -->
     <item name="status_bar_day" type="color">#E5A500</item>

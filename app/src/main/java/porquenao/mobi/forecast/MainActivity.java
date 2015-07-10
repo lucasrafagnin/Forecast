@@ -20,6 +20,7 @@ public class MainActivity extends FragmentActivity {
 
         PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs_bar);
         tabs.setViewPager(pager);
+
     }
 
 }
