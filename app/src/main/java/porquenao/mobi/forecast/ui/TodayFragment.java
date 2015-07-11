@@ -20,7 +20,7 @@ public class TodayFragment extends Fragment {
 
     public static int getTheme(LayoutInflater inflater, ViewGroup container) {
         int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-        if (hour >= 6 && hour <= 16)
+        if (hour >= 6 && hour <= 17)
             return R.layout.today_day;
         else
             return R.layout.today_night;

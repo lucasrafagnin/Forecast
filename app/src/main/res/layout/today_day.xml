@@ -15,7 +15,7 @@
         android:layout_marginTop="40dp"
         android:src="@drawable/ic_placeholder_day_clear_sky"/>
 
-    <TextView
+    <porquenao.mobi.forecast.ui.CustomTextView
         android:id="@+id/temp"
         style="@style/AppTextViewDay"
         android:layout_width="wrap_content"
@@ -24,7 +24,7 @@
         android:text="27º"
         android:textSize="73sp"/>
 
-    <TextView
+    <porquenao.mobi.forecast.ui.CustomTextView
         android:id="@+id/temp_min"
         style="@style/AppTextViewDay"
         android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
         android:layout_toLeftOf="@+id/temp_max"
         android:background="@color/font_day"/>
 
-    <TextView
+    <porquenao.mobi.forecast.ui.CustomTextView
         android:id="@+id/temp_max"
         style="@style/AppTextViewDay"
         android:layout_width="wrap_content"
@@ -61,7 +61,7 @@
         android:layout_marginTop="12dp"
         android:background="@color/font_day"/>
 
-    <TextView
+    <porquenao.mobi.forecast.ui.CustomTextView
         android:id="@+id/city"
         style="@style/AppTextViewDay"
         android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
         android:text="GOTHAM"
         android:textAllCaps="true"/>
 
-    <TextView
+    <porquenao.mobi.forecast.ui.CustomTextView
         android:id="@+id/time"
         style="@style/AppTextViewDay"
         android:layout_width="wrap_content"

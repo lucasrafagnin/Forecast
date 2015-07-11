@@ -1,5 +1,9 @@
 package porquenao.mobi.forecast.core.model;
 
+import android.content.Context;
+
+import java.util.Calendar;
+
 import porquenao.mobi.forecast.R;
 
 /**
@@ -13,6 +17,7 @@ public class Weather {
     String average;
     String min;
     String max;
+    String url;
 
     public Weather() {
     }
@@ -37,6 +42,14 @@ public class Weather {
         return min;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     public String getMax() {
         return max;
     }
@@ -50,6 +63,22 @@ public class Weather {
             return R.drawable.cell_red;
     }
 
+    public int getTempIcon(boolean list, Context context) {
+        StringBuilder resourceName = new StringBuilder();
+        StringBuilder iconUrl = new StringBuilder();
+
+        int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+        boolean day = hour >= 6 && hour <= 16;
+        resourceName.append("ic_placeholder_").append(list ? "list" : (day ? "day" : "night")).append("_").append(getStatus());
+
+        //"/ic_list_clear_sky.png";
+        float density = context.getResources().getDisplayMetrics().density;
+        iconUrl.append("http://forecastpqn.parseapp.com/images/").append(density).append("/");
+        iconUrl.append(resourceName.toString().replaceAll("placeholder_", "")).append(".png");
+        setUrl(iconUrl.toString());
+
+        return context.getResources().getIdentifier(resourceName.toString(), "drawable", context.getPackageName());
+    }
 }
 
 

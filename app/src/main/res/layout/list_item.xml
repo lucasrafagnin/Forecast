@@ -8,7 +8,7 @@
     android:layout_marginRight="16dp"
     android:background="@drawable/cell_yellow">
 
-    <TextView
+    <porquenao.mobi.forecast.ui.CustomTextView
         android:id="@+id/day"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
         android:textColor="@color/item_day"
         android:textSize="26sp"/>
 
-    <TextView
+    <porquenao.mobi.forecast.ui.CustomTextView
         android:id="@+id/date"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
         android:layout_toRightOf="@+id/space"
         android:src="@drawable/ic_placeholder_list_clear_sky"/>
 
-    <TextView
+    <porquenao.mobi.forecast.ui.CustomTextView
         android:id="@+id/temp_min"
         style="@style/ListTextViewTemp"
         android:layout_width="wrap_content"
@@ -65,7 +65,7 @@
         android:layout_toLeftOf="@+id/temp_max"
         android:background="@color/item_divider"/>
 
-    <TextView
+    <porquenao.mobi.forecast.ui.CustomTextView
         android:id="@+id/temp_max"
         style="@style/ListTextViewTemp"
         android:layout_width="wrap_content"
