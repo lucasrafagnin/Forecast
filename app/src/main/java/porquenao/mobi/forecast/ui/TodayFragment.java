@@ -7,9 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.Calendar;
-
 import porquenao.mobi.forecast.R;
+import porquenao.mobi.forecast.core.util.Helper;
 
 public class TodayFragment extends Fragment {
 
@@ -21,18 +20,10 @@ public class TodayFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        int resource = getTheme(inflater, container);
+        int resource = Helper.isDay() ? R.layout.today_day : R.layout.today_night;
         View view = inflater.inflate(resource, container, false);
 
         return view;
-    }
-
-    public static int getTheme(LayoutInflater inflater, ViewGroup container) {
-        int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-        if (hour >= 6 && hour <= 17)
-            return R.layout.today_day;
-        else
-            return R.layout.today_night;
     }
 
     public static void todayWeather(View v) {
