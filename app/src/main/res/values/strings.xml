@@ -3,4 +3,9 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="api_url">http://forecastpqn.parseapp.com/</string>
+    <string name="api_qnty">15</string>
+    <string name="api_error">Não foi possível atualizar a previsão atual</string>
+    <string name="loading_title">Aguarde</string>
+    <string name="loading_message">Baixando a previsão dos próximos dias...</string>
 </resources>

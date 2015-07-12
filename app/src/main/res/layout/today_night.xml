@@ -12,8 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/ic_placeholder_day_clear_sky"/>
+        android:layout_marginTop="40dp"/>
 
     <porquenao.mobi.forecast.ui.CustomTextView
         android:id="@+id/temp"
@@ -21,7 +20,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/main_divider"
-        android:text="27º"
         android:textSize="73sp"/>
 
     <porquenao.mobi.forecast.ui.CustomTextView
@@ -30,8 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/main_divider"
-        android:layout_toLeftOf="@+id/temp_divider"
-        android:text="14º"/>
+        android:layout_toLeftOf="@+id/temp_divider"/>
 
     <View
         android:id="@+id/temp_divider"
@@ -49,8 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/main_divider"
-        android:layout_alignParentRight="true"
-        android:text="32º"/>
+        android:layout_alignParentRight="true"/>
 
     <View
         android:id="@+id/main_divider"
@@ -67,7 +63,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="GOTHAM"
         android:textAllCaps="true"/>
 
     <porquenao.mobi.forecast.ui.CustomTextView
@@ -76,6 +71,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text="13h24"/>
+        android:layout_alignParentRight="true"/>
 </RelativeLayout>

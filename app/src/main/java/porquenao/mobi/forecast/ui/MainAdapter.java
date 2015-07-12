@@ -34,4 +34,5 @@ public class MainAdapter extends FragmentPagerAdapter implements PagerSlidingTab
     public int getPageIconResId(int position) {
         return tabIcons[position];
     }
+
 }

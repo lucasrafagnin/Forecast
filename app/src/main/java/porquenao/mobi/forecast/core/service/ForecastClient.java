@@ -12,6 +12,6 @@ import retrofit.http.Query;
 public interface ForecastClient {
 
     @GET("/get")
-    List<Weather> temperatures(@Query("count") String count
+    List<Weather> weathers(@Query("count") String count
     );
 }

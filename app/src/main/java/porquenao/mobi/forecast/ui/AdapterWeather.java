@@ -70,7 +70,7 @@ public class AdapterWeather extends BaseAdapter {
         holder.vTempMax.setText(item.getMax() + "º");
         holder.vRow.setBackgroundResource(item.getTempColor());
 
-        Picasso.with(mContext).load(item.getUrl()).placeholder(item.getTempIcon(true, mContext)).into(holder.vIcon);
+        Picasso.with(mContext).load(item.getUrl(true, mContext)).placeholder(item.getTempIcon(true, mContext)).into(holder.vIcon);
 
         return convertView;
     }

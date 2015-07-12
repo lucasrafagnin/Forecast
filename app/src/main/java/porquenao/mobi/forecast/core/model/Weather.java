@@ -2,22 +2,34 @@ package porquenao.mobi.forecast.core.model;
 
 import android.content.Context;
 
-import java.util.Calendar;
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
+import java.io.Serializable;
 
 import porquenao.mobi.forecast.R;
+import porquenao.mobi.forecast.core.util.Helper;
 
 /**
  * Created by lucas on 7/9/15.
  */
-public class Weather {
+@DatabaseTable(tableName = "weather")
+public class Weather implements Serializable {
 
-    String city;
-    String status;
-    Long date;
-    String average;
-    String min;
-    String max;
-    String url;
+    @DatabaseField(generatedId = true)
+    private Long id;
+    @DatabaseField
+    private String city;
+    @DatabaseField
+    private String status;
+    @DatabaseField
+    private Long date;
+    @DatabaseField
+    private String average;
+    @DatabaseField
+    private String min;
+    @DatabaseField
+    private String max;
 
     public Weather() {
     }
@@ -26,32 +38,48 @@ public class Weather {
         return city;
     }
 
+    public void setCity(String city) {
+        this.city = city;
+    }
+
     public String getStatus() {
         return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Long getDate() {
         return date;
     }
 
+    public void setDate(Long date) {
+        this.date = date;
+    }
+
     public String getAverage() {
         return average;
+    }
+
+    public void setAverage(String average) {
+        this.average = average;
     }
 
     public String getMin() {
         return min;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
+    public void setMin(String min) {
+        this.min = min;
     }
 
     public String getMax() {
         return max;
+    }
+
+    public void setMax(String max) {
+        this.max = max;
     }
 
     public int getTempColor() {
@@ -65,20 +93,24 @@ public class Weather {
 
     public int getTempIcon(boolean list, Context context) {
         StringBuilder resourceName = new StringBuilder();
-        StringBuilder iconUrl = new StringBuilder();
 
-        int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-        boolean day = hour >= 6 && hour <= 16;
+        boolean day = Helper.isDay();
         resourceName.append("ic_placeholder_").append(list ? "list" : (day ? "day" : "night")).append("_").append(getStatus());
-
-        //"/ic_list_clear_sky.png";
-        float density = context.getResources().getDisplayMetrics().density;
-        iconUrl.append("http://forecastpqn.parseapp.com/images/").append(density).append("/");
-        iconUrl.append(resourceName.toString().replaceAll("placeholder_", "")).append(".png");
-        setUrl(iconUrl.toString());
 
         return context.getResources().getIdentifier(resourceName.toString(), "drawable", context.getPackageName());
     }
+
+    public String getUrl(boolean list, Context context) {
+        StringBuilder iconUrl = new StringBuilder();
+
+        float density = context.getResources().getDisplayMetrics().density;
+        iconUrl.append(context.getResources().getString(R.string.api_url)).append("images/").append(density).append("/ic_");
+        boolean day = Helper.isDay();
+        iconUrl.append(list ? "list" : (day ? "day" : "night")).append("_").append(getStatus()).append(".png");
+
+        return iconUrl.toString();
+    }
+
 }
 
 
